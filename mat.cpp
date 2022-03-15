@@ -13,16 +13,11 @@ using namespace ariel;
 namespace ariel
 {
     string mat(int column, int row, char symbol1, char symbol2){
-        const int minrangeofasciivalue = 33;
-        const int maxrangeofasciivalue = 126;
         if (row<0 || column<0){
             throw "ERROR: mat size should be allways positive and they not";
         }
         if (row%2==0 || column%2==0){
             throw "ERROR: mat size should always be odd and they not";
-        }
-        if (symbol1<minrangeofasciivalue || symbol1>maxrangeofasciivalue || symbol2<minrangeofasciivalue || symbol2>maxrangeofasciivalue){
-            throw "ERROR: The symbols are not in the required range";
         }
         //Set the iterators outside the loops to preserve values between each iteration
         int i = 0;
